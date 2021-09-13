@@ -1,0 +1,234 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #7857fc;
+    --color-1: #e91e63;
+    --color-2: #f5ac10;
+    --color-3: #09d69c;
+    --bg-dark: #2b2c2f;
+    --main-color-to-dark-color: var(--main-color);
+    --dark-color-to-main-color: var(--bg-dark);
+    --shadow-black-100: 0 5px 5px rgba(0,0,0,0.1);
+    --shadow-black-300: 0 5px 5px rgba(0,0,0,0.03);
+    --black-900: #000000;
+    --black-400: #555555;
+    --black-100: #f7f7f7;
+    --black-000: #ffffff;
+    --black-alpha-100: rgba(0,0,0,0.05);
+
+}
+
+.btn-1{
+    background-color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: var(--main-color);
+    font-style: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-black-300);
+}
+
+.navbar{
+    background-color: var(--main-color);
+    padding: 20px 0;
+}
+
+.navbar-brand:hover{
+    color: var(--color-2);
+}
+
+.btn-1:focus{
+    box-shadow: var(--shadow-black-300);
+}
+
+.btn-1:hover{
+    color: #ffffff;
+    background-color: var(--main-color);
+}
+
+@keyframes spin_01{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounceTop_01{
+    0%,100%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulse_01{
+    0%{
+        transform: scale(0.94);
+        box-shadow: 0 0 0 0  rgba(255, 255, 255, 0.7);
+    }
+
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 12px  rgba(255, 255, 255, 0);
+    }
+    100%{
+        transform: scale(0.94);
+        box-shadow: 0 0 0 12px  rgba(255, 255, 255, 0);
+    }
+}
+
+.effect-1, .effect-2, .effect-3{
+    position: absolute;
+    position: -1;
+}
+
+.effect-1{
+    left: 20%;
+    top: 20%;
+    font-size: 20px;
+    color: var(--color-2);
+    animation: spin_01 5s linear infinite;
+}
+
+.effect-2{
+    right:10%;
+    top: 40%;
+    color: var(--color-2);
+    animation: spin_01 5s linear infinite;
+}
+
+.effect-3{
+    left:10%;
+    top: 45%;
+    color: var(--color-1);
+    animation: spin_01 5s linear infinite;
+}
+
+.navbar > .container{
+    padding: 15px 0;
+}
+
+.navbar-brand{
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.nav-item{
+    margin-left: 40px;
+}
+
+.nav-link{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-link::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--color-2);
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.nav-link:hover::before{
+    transform: scale(1);
+}
+
+.nav-link:hover{
+    color: var(--color-2);
+}
+
+/* home style */
+.home{
+    min-height: 100vh;
+    padding: 150px 0;
+    background-color: var(--main-color);
+    position: relative;
+    z-index: 1;
+}
+
+.home-text h1{
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.home-text p{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+.home-btn{
+    margin-top: 40px;
+}
+
+.video-play-btn{
+    margin-left: 40px;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    animation: pulse_01 2s ease infinite;
+}
+
+.video-play-btn:hover{
+    animation: none;
+}
+
+.home-img img{
+    max-width: 250px;
+    width: 100%;
+    box-shadow: var(--shadow-black-300);
+    border-radius: 32px;
+    animation: bounceTop_01 3s ease infinite;
+}
+
+.home-img{
+    position: relative;
+}
+
+.home-img .circle{
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-img .circle::before{
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    left: 30px;
+    top: 30px;
+    transform-origin: 170px 170px;
+    animation: spin_01 10s linear infinite;
+}
+
+/* video popup style */
