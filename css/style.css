@@ -252,6 +252,45 @@
     margin: 15px;
     padding: 30px;
     text-align: center;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.feature-item::after,
+.feature-item::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.feature-item::before{
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-1);
+    left: 10px;
+    top: 40%;
+}
+
+.feature-item:hover::before{
+    left: 10px;
+    opacity: 1;
+}
+
+.feature-item:hover::after{
+    right: -10px;
+    opacity: 1;
+}
+
+.feature-item::after{
+    height: 30px;
+    width: 30px;
+    background-color: var(--color-2);
+    right: 10px;
+    top: 80%;
 }
 
 .feature-item p{
