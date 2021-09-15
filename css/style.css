@@ -346,6 +346,51 @@
     text-transform: capitalize;
 }
 
-.padding{
-    
+/* --------fan facts-------- */
+.fun-facts{
+    background-color: var(--black-100);
+}
+
+.fun-facts-text p{
+    color: var(--black-400);
+}
+
+.fun-facts img{
+    max-width: 250px;
+    width: 100%;
+    box-shadow: var(--shadow-black-300);
+    border-radius: 32px;
+    animation: bounceTop_01 3s ease infinite;
+}
+
+.fun-facts-item{
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-black-300);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.style-1{
+    background-color: var(--color-1);
+    color: var(--black-100);
+}
+.style-2{
+    background-color: var(--color-2);
+    color: var(--black-100);
+}
+.style-3{
+    background-color: var(--color-3);
+    color: var(--black-100);
+}
+.style-4{
+    color: var(--black-100);
+    background-color: var(--main-color);
+}
+
+/* --------app screenshots------- */
+
+.screenshots img{
+    padding-top: 30px;
+    max-width: 200px;
+    width: 100%;
 }
